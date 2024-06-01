@@ -9,16 +9,63 @@ body{
 	display: flex;
     justify-content: space-between; 
     flex-wrap: wrap; 
+	opacity: 0; /* Opacité initiale à 0 */
+    animation: fade-in 2s forwards; /* Animation du fondu */
     
 }
+@keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+  }
 .present{
 	background-color: #E2FCEF;
-	padding: 60px;
+	padding: 20px 40px;
 	width: 70%;
+	
+}
+/*debut : a ajouter*/
 
+.contenue-detail{
+	background-color: #E2FCEF;
+	margin: 20px 0;
+	display: flex;
+	opacity: 0; /* Opacité initiale à 0 */
+    animation: fade-in 6s forwards; /* Animation du fondu */
+	
 }
 
+.contenue-detail-text{
+	padding: 20px;
+	margin: 20px ;
+	width: 50%;
+	text-align:left
+}
+.contenue-detail-text h2{
+	color: #4D194D;
+	font-weight: 600;
+}
+.contenue-detail-text p{
+	padding-top: 10px;
+}
+
+.contenue-detail-image {
+	width: 50%;
+	position:relative;
+}
+
+.contenue-detail-image img{
+	position: absolute;
+	width: 50%;
+	top: 50%;
+  	left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #4D194D;
+  border-radius: 50%;
+}
+  
+/*fin : a ajouter*/
 .present h1{
+	font-size: 40px;
 	padding-top: 10px ;
 	color: #4D194D;
 	font-weight: 600;
@@ -26,8 +73,10 @@ body{
 .present h2{
 	padding: 10px 0;
 	color: #4D194D;
+	font-size: 35px;
 }
-.present h4{
+.present h3{
+	padding-top: 20px;
 	padding-bottom: 15px ;
 	color: #4D194D;
 }
@@ -36,7 +85,8 @@ body{
 }
 
 .social-media{
-	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 	color: #4D194D;
 	font-size: 30px;
 }
@@ -44,7 +94,7 @@ body{
 
 .present button{
 	font-size: 12px;
-	padding: 10px  10px ;
+	padding: 7px  10px ;
 	border-radius: 2%;
 	color: #E2FCEF;
 	background-color: #4D194D;
@@ -98,8 +148,15 @@ body{
 		order:2;
 		justify-content: center;
 		align-content: flex-start;
-		padding: 20px 40px;
+		padding: 10px;
 		text-align: center;
+	}
+	.present h1{
+		font-size: 25px;
+	}
+	.present h2{
+		font-size: 15px;
+
 	}
 	.present-image{
 		order: 1;
@@ -107,7 +164,7 @@ body{
 		width: 100%;
 		align-content: center;
 		justify-content: center;
-		padding:20px 0;
+		padding-top:10px ;
 		
 	}
 	.image-profil, .image-profil img {
@@ -118,14 +175,21 @@ body{
 	.present button{
 		font-size: 10px;
 		padding: 10px 15px ;
-		border-radius: 2%;
+		border-radius: 6%;
 		color: #E2FCEF;
 		background-color: #4D194D;
-		border: 5px solid #4D194D;
+		border: 3px solid #4D194D;
 	}
 	.present h2{
 		padding-top: 0;
 	}
+	.contenue-detail-image{
+		display: none;
+	}
+	.contenue-detail-text{
+		width: 100%;
+	}
+	
 	
 }
 /*--------------------------------------------------------------------------------*/
@@ -169,9 +233,6 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-
-
 
 
 .contenue-page{
@@ -232,7 +293,7 @@ textarea {
 	border: 3px solid #4D194D;
 	background-color:#E2FCEF;
 	color: #4D194D;
-	transition: 1s;
+	transition: 0.5s;
 
 }
 
@@ -343,7 +404,6 @@ div.last-project div h4{
 	border-radius: 2%;
 	color: #E2FCEF;
 	background-color: #4D194D;
-	border: 5px solid #4D194D;
 	border-radius: 20px;
 }
 .last-project button:hover{
@@ -358,16 +418,29 @@ div.last-project div h4{
 @media (max-width: 900px) {
     .last-project { /*mettre le nom de la div*/
       flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
     }
 	div.last-project div{
-		width: 100%;
+		align-items: center;
+		justify-content: center;
+		width: 60%;
 		padding: 0 20px;
 		margin: 5px 0;
 	}
 	.f-item-con{ 
 		flex-direction: column;
 
-	  }
+	}
+	.f-item-con div{
+		display: flex;
+		flex-direction: column;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+
+	}
 }
 
 .last-project p{
@@ -382,6 +455,7 @@ div.last-project div h4{
 
 /*------------------------------DEBUT DU FOOTER---------------------------- */
 footer{
+	display: flex;
 	background-color:#4D194D;
 	margin: 50px 0;
 	padding: 20px 0;
@@ -396,19 +470,30 @@ footer{
     grid-gap: 3rem;
 }
 
+.app-info{
+		display: flex; /* Utilisation de flexbox pour aligner les éléments au centre */
+		justify-content: center; /* Alignement horizontal au centre */
+		align-items: center; /* Alignement vertical au centre */
+		flex-direction: column
+}
+
+
 footer .app-info img{
 	max-width:50%;
 	height: auto;
+	padding-bottom: 10px;
 }
 
 footer .app-info p{
     color: white;
 	text-decoration: none;
 	align-content: center;
+	padding-bottom: 10px;
 }
 footer .app-info p a{
     color: white;
 	text-decoration: none;
+	padding-bottom: 10px;
 }
 
 footer .footer-title{ 
@@ -416,6 +501,9 @@ footer .footer-title{
     line-height: 1.75rem;
     color: white;
     height: fit-content;
+	padding-bottom: 20px;
+	text-align: center;
+	align-content: center;
 }
 footer ul{ 
     padding-left: 1.75rem;
@@ -473,21 +561,30 @@ form .g-inp{
     font-weight: 500;
 }
 
+.useful-links{
+	display: flex; /* Utilisation de flexbox pour aligner les éléments au centre */
+	justify-content: center; /* Alignement horizontal au centre */
+	align-items: center; /* Alignement vertical au centre */
+	flex-direction: column;
+	font-size: 16px;
+}
 .useful-links ul li a{
 	text-decoration: none;
-	color:#E2FCEF;
-	text-align: center;
+	color:white;
 
 }
 .useful-links li{
-	padding: 6px;
 	list-style-type: none;
-	text-align: center;
+	padding-top: 10px;
 }
 
 .useful-links ul{
-	text-align: center;
-	align-content: center;
+	display: flex; /* Utilisation de flexbox pour aligner les éléments au centre */
+	justify-content: center; /* Alignement horizontal au centre */
+	align-items: center; /* Alignement vertical au centre */
+	flex-direction: column;
+	font-size: 16px;
+
 }
 
 .btn-icone{
@@ -507,6 +604,13 @@ form .g-inp{
 	display: block;
 	justify-content: center;
 
+}
+
+.btn-cv:hover{
+	border: 3px solid #E2FCEF;
+	background-color:#4D194D;
+	color:#E2FCEF;
+	transition: 0.5s;
 }
 .btn-cv a{
 	font-size: 12px;
