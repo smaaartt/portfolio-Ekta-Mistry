@@ -19,7 +19,6 @@ body{
   }
 .present{
 	background-color: #E2FCEF;
-	margin-top:20px;
 	padding: 20px 40px;
 	width: 70%;
 	
@@ -298,30 +297,6 @@ textarea {
 
 }
 
-
-.presentation{
-	padding: 5% 0;
-}
-
-.presentation div{
-	/*display: inline;*/
-	padding: 7%;
-	overflow: auto;
-	background-color:#E2FCEF ;
-	
-	
-}
-
-.presentation_logo{
-	padding: 5% 5%;
-	float: left; /* Alignement de l'image à gauche */
-    margin-right: 10px; /* Marge à droite pour espacer l'image du texte */
-}	
-
-.presentation_texte{
-	text-align: left; 
-	text-justify: auto;
-}
 
 /*------------------ANIMATION CARRE CERCLE------------- 
 .presentation_logo  {
