@@ -14,7 +14,6 @@ body{
     font-family: "Poppins", sans-serif;
 }
 header{
-    
     top:0;left:0; right :0;
     background-color: #4D194D;    
     padding:15px 3%;
@@ -64,23 +63,27 @@ nav a:hover{
     top: 0;
     top: 100%;
     background-color: #4D194D;
+    z-index: 1000;
+    border-radius: 10%;
+    border: 1px solid #E2FCEF;
 }
 .dropdown-menu{
     display: none;
+    z-index: 1000;
 }
 .dropdown-menu ul{
     display: block;
     margin:10px;
+    visibility: visible;
+    opacity: 1;
 }
 
-.dropdown-menu li:hover{
+.dropdown-menu:hover{
     background-color: #E2FCEF;
     color:#4D194D;
+    display: block;
 }
-.dropdown-menu li a:hover{
-    background-color: #E2FCEF;
-    color:#4D194D;
-}
+
 
 .dropdown-menu li {
     width: 150px;
@@ -134,6 +137,7 @@ hr.dropdown-divider{
         height:100vh;
         text-align: center;
         font-size: 15px; 
+        z-index: 1000;
     }
     header .navbar .menu li {
         width: 100%;  
