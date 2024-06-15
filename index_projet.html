@@ -1,246 +1,431 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/style_projet_new.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style_navbar.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   
+</head>
+<body>
 
-	<head>
-		<title> Portfolio </title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="CSS/style_projet.css">
-        <link rel="stylesheet" type="text/css" href="CSS/style_navbar.css">
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
- 
-        
-		<!-- <link rel="stylesheet" type="text/css" href="CSS_bootstrap/bootstrap.min.css"> -->
-	</head>
-	<body>
-        
-
-	<!------------------------------------------------------DEBUT NAVBAR ------------------------------------------->
-	<header>
-		<nav class="navbar">
-			<input type="checkbox" id="check" name="" value="">		
-			<div class="logo">
-				<a  href="index.html"><img src="image/logo.png"  alt=""></a> 
-			</div>
-			<ul class="menu">  				
+    <!------------------------------------------------------DEBUT NAVBAR ------------------------------------------->
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="check" name="" value="">
+            <div class="logo">
+                <a href="index.html"><img src="image/logo.png" alt=""></a>
+            </div>
+            <ul class="menu">
                 <li>
-					<a href="#">Parcours</a>
-					<ion-icon class="icone-bas" name="chevron-down-outline"></ion-icon>
-					<ul class="dropdown-menu">
-						<li><a href="index_parcours.html">Parcours</a></li> 
-						<li><hr class="dropdown-divider"></li>
-						<li><a  href="index_formation.html">Formation</a></li> 
-					</ul>				
-				</li>
-                <li>		
-					<a href="#">Expérience</a>
-					<ion-icon class="icone-bas" name="chevron-down-outline"></ion-icon>
-					<ul class="dropdown-menu">
-						<li><a  href="index_projet.html">Projet</a></li> 
-						<li><a  href="index_alternance.html">Alternance</a></li> <!--  Ajouter le lien de la page parcours  -->
-					</ul>
-				</li>
+                    <a href="#">Parcours</a>
+                    <ion-icon class="icone-bas" name="chevron-down-outline"></ion-icon>
+                    <ul class="dropdown-menu">
+                        <li><a href="index_parcours.html">Parcours</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="index_formation.html">Formation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Expérience</a>
+                    <ion-icon class="icone-bas" name="chevron-down-outline"></ion-icon>
+                    <ul class="dropdown-menu">
+                        <li><a href="index_projet.html">Projet</a></li>
+                        <li><a href="index_alternance.html">Alternance</a></li>
+                    </ul>
+                </li>
                 <li><a href="index_competence.html">Compétence</a></li>
                 <li><a href="index_va.html">Vie associative</a></li>
-			</ul>	
-			<label for="check" id="checkbtn" ><ion-icon name="menu-outline"></ion-icon></label>			
-		</nav>		
-	</header>
-	<!-------------------------------------------------------- FIN NAVBAR ------------------------------------------->
+            </ul>
+            <label for="check" id="checkbtn"><ion-icon name="menu-outline"></ion-icon></label>
+        </nav>
+    </header>
+    <!-------------------------------------------------------- FIN NAVBAR ------------------------------------------->
 
-	<h1>Mes projets</h1>
-	<div class="container-page-projet">
-		<!-- ------------DEBUT DU PREMIER PROJET ------------ -->	
-		<div class="titre-projet">
-			<h3>Enquête sur le bilan carbone des membres de l’IUT de Paris-Rives de Seine</h3>
-		</div>
-		
-		<div class="box-intro">
-			<ul> 
-				<li>Source : Données issues suite au sondage sur les habitudes et les changements que les membres de l’établissement seraient prêts à effectuer pour réduire leur empreinte carbone.
-				</li>
-				<li><strong>Bais et Enjeux :</strong> </li>
-				<ul> 
-					<p>- Proportion d’une population jeune en masse</p> 
-					<p>- 47% des usagers sont âgés entre 18 et 26 ans </p>
-				</ul>
-				<li>Projet réalisé en groupe de 4 personnes </li>
-				
-			</ul>
-		</div>
-		
-		<div class="box">
-			<h4>Nettoyage et traitement de la base données</h4>
-			<p>
-			Suite aux résultats reçus après la diffusion du sondage, j’ai exporté la base de données contenant les résultats des personnes de l’IUT ayant répondu. Ensuite j’ai procédé au nettoyage et tri des données en sélectionnant les individus ayant répondu à toutes les questions jusqu’à la fin du questionnaire.
-			</p>
-			<h4> Analyse des pratiques écologiques menées </h4>
-			<p>
-				Les types de transports utilisés pour voyager, le type de régime type régime suivi, la fréquence de consommation de viande font partie des pratiques interroger aux usagers.
-			Pour étudier ces pratiques écologiques en fonction de l'âge, j’ai établi une analyse statistique bivariée ainsi que des graphiques pour visualiser les résultats.
-			J’ai créé des classes d'âge de façon équilibrée afin d’avoir la répartition des individus en fonction de l'âge. 
+    <!-- Page content -->
+    <h1>Mes projets</h1>
+    <div class="container-page-projet">
+        <div class="projets">
+        <!-- ------------------------------ DEBUT Premier projet---------------------- -->
 
-			</p>
-			<h4>Détermination de lien de dépendance </h4>
-			<p>Le calcul de la p-valeur a montré les variables âge et le régime suivie sont ainsi significativement liées.
-				En effet, les résultats démontrent que la classe d'âge 26 - 35 ans s’avère être de plus en plus consciente en matière d’écologie et privilégie un régime végétarien ou végan ou flexitarien afin de réduire au mieux leur consommation de viande.
-			</p>
+            <div class="card">
+                <div class="container-text">
+                    <p><ion-icon name="school-outline">  </ion-icon>  Projet académique </p>
+                    <h3>Enquête sur le bilan carbone des membres de l’IUT de Paris-Rives de Seine</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Analyse statistique descriptive</li>
+                        <li>Mise en oeuvre d’un sondage</li>
+                        <li>Collecte de données                        </li>
+                        <li>Traitement et nettoyage de base de données                        </li>
+                        <li>Visualisation de données </li>
+                        <li>Présentation PowerPoint</li>
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés : </h4> 
+                        <img src="image/Microsoft-Office-logo.jpg" alt="">
+                    </div>
+                </div>
+                <!-- MODAL-->
+                <a href="#modal1" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal1" class="modal">
+                    <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Enquête sur le bilan carbone des membres de l’IUT de Paris-Rives de Seine</h3>
+                        <ul> 
+                            <li>Source : Données issues suite au sondage sur les habitudes et les changements que les membres de l’établissement seraient prêts à effectuer pour réduire leur empreinte carbone.
+                            </li>
+                            <li><strong>Bais et Enjeux :</strong> </li>
+                            <ul> 
+                                <p>- Proportion d’une population jeune en masse</p> 
+                                <p>- 47% des usagers sont âgés entre 18 et 26 ans </p>
+                            </ul>
+                            <li>Projet réalisé en groupe de 4 personnes </li>
+                        </ul>
 
-		</div>
-		
-			<!------------------------------------DEBUT CAROUSEL-------------------------------->
+                        <h4>Nettoyage et traitement de la base données</h4>
+                        <p>
+                        Suite aux résultats reçus après la diffusion du sondage, j’ai exporté la base de données contenant les résultats des personnes de l’IUT ayant répondu. Ensuite j’ai procédé au nettoyage et tri des données en sélectionnant les individus ayant répondu à toutes les questions jusqu’à la fin du questionnaire.
+                        </p>
+                        <h4> Analyse des pratiques écologiques menées </h4>
+                        <p>
+                            Les types de transports utilisés pour voyager, le type de régime type régime suivi, la fréquence de consommation de viande font partie des pratiques interroger aux usagers.
+                        Pour étudier ces pratiques écologiques en fonction de l'âge, j’ai établi une analyse statistique bivariée ainsi que des graphiques pour visualiser les résultats.
+                        J’ai créé des classes d'âge de façon équilibrée afin d’avoir la répartition des individus en fonction de l'âge. 
+            
+                        </p>
+                        <h4>Détermination de lien de dépendance </h4>
+                        <p>Le calcul de la p-valeur a montré les variables âge et le régime suivie sont ainsi significativement liées.
+                            En effet, les résultats démontrent que la classe d'âge 26 - 35 ans s’avère être de plus en plus consciente en matière d’écologie et privilégie un régime végétarien ou végan ou flexitarien afin de réduire au mieux leur consommation de viande.
+                        </p>
 
-		<div class="box-carousel">
-			<div class="carousel">
-				<ul class="slides">
-					<input type="radio" name="radio-buttons" id="img-1" checked />
-					<li class="slide-container">
-					  <div class="slide-image">
-						<img src="image/projet1-enq1.png">
-					  </div>
-					  <div class="carousel-controls">
-						<label for="img-3" class="prev-slide">
-						  <span>&lsaquo;</span>
-						</label>
-						<label for="img-2" class="next-slide">
-						  <span>&rsaquo;</span>
-						</label>
-					  </div>
-					</li>
-					<input type="radio" name="radio-buttons" id="img-2" />
-					<li class="slide-container">
-					  <div class="slide-image">
-						<img src="image/projet1-enq2.png">
-					  </div>
-					  <div class="carousel-controls">
-						<label for="img-1" class="prev-slide">
-						  <span>&lsaquo;</span>
-						</label>
-						<label for="img-3" class="next-slide">
-						  <span>&rsaquo;</span>
-						</label>
-					  </div>
-					</li>
-					<input type="radio" name="radio-buttons" id="img-3" />
-					<li class="slide-container">
-					  <div class="slide-image">
-						<img src="image/projet1-enq3.png">
-					  </div>
-					  <div class="carousel-controls">
-						<label for="img-2" class="prev-slide">
-						  <span>&lsaquo;</span>
-						</label>
-						<label for="img-1" class="next-slide">
-						  <span>&rsaquo;</span>
-						</label>
-					  </div>
-					</li>
-					<div class="carousel-dots">
-					  <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-					  <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-					  <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-					  <p><span style="color:#4D194D;">Livrables :</span> Présentation PowerPoint et Rapport d'Analyse</p>
-					  <p><span style="color:#4D194D;">Outils utilisés :</span>Microsoft Office dont Excel, PowerPoint</p>
-					</div>
-				  </ul>
-				</div>
-			</div>	
+                        <div class="box-carousel">
+                            <div class="carousel">
+                                <ul class="slides">
+                                    <input type="radio" name="radio-buttons" id="img-1" checked />
+                                    <li class="slide-container">
+                                      <div class="slide-image">
+                                        <img src="image/projet1-enq1.png">
+                                      </div>
+                                      <div class="carousel-controls">
+                                        <label for="img-3" class="prev-slide">
+                                          <span>&lsaquo;</span>
+                                        </label>
+                                        <label for="img-2" class="next-slide">
+                                          <span>&rsaquo;</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <input type="radio" name="radio-buttons" id="img-2" />
+                                    <li class="slide-container">
+                                      <div class="slide-image">
+                                        <img src="image/projet1-enq2.png">
+                                      </div>
+                                      <div class="carousel-controls">
+                                        <label for="img-1" class="prev-slide">
+                                          <span>&lsaquo;</span>
+                                        </label>
+                                        <label for="img-3" class="next-slide">
+                                          <span>&rsaquo;</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <input type="radio" name="radio-buttons" id="img-3" />
+                                    <li class="slide-container">
+                                      <div class="slide-image">
+                                        <img src="image/projet1-enq3.png">
+                                      </div>
+                                      <div class="carousel-controls">
+                                        <label for="img-2" class="prev-slide">
+                                          <span>&lsaquo;</span>
+                                        </label>
+                                        <label for="img-1" class="next-slide">
+                                          <span>&rsaquo;</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <div class="carousel-dots">
+                                      <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                                      <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                                      <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                                      <p><span style="color:#4D194D;">Livrables :</span> Présentation PowerPoint et Rapport d'Analyse</p>
+                                      <p><span style="color:#4D194D;">Outils utilisés :</span>Microsoft Office dont Excel, PowerPoint</p>
+                                    </div>
+                                  </ul>
+                                </div>
+                            </div>	
+                        
+                        <a href="#" class="modal_close">&times;</a>
+    
+                    </div>
+                    <!----------------------------- FIN  CONTENUE MODAL-------------------->
+                </div>
+                <div class="container-image">
+                    
 
-	</div>
-			<!-- ------------FIN DU PREMIER PROJET ------------ -->			
-		
+                </div>
+            </div>
+        <!-- ------------------------------ FIN Premier projet---------------------- -->
+         <!-- ------------------------------ DEBUT 2ème projet---------------------- -->
+
+        <div class="card">
+                <div class="container-text">
+                    <p><ion-icon name="school-outline">  </ion-icon>  Projet académique </p>
+                    <h3>Etude analytique sur les performances des pays aux Jeux Olympiques d'hiver</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Analyse descriptive et exploratoire</li>
+                        <li>Programmation statistique R studio </li>
+                        <li>Traitement et nettoyage de bases de données</li>
+                        <li>Etude des liens de corrélations  </li>
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés : </h4> 
+                        <img src="image/RStudio_Logo.png" alt="">
+                        <img src="image/Microsoft-Office-logo.jpg" alt="" >
+
+                    </div>
+
+                </div>
+
+                <a href="#modal2" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal2" class="modal">
+                <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Etude analytique du lien entre la taille de la population et les performances des pays aux Jeux Olympiques d'hiver</h3>
+                        <ul> 
+                            <li>Source : Bases de données issues des sites<a href="https://databank.worldbank.org/"> DataBank </a>et <a href="https://www.data.gouv.fr/fr/"> data.gouv.fr </a></li>
+                            <p>Afin d'analyser au mieux notre sujet, la base de données est importée à partir du site Data gouv contenant les données concernant les différentes médailles des Jeux Olympique d’hiver de 1924 à 2010. La seconde base de données regroupe l’évolution de la taille de la population des pays de 1960 à 2021 et comprend des informations telles que l'année, le sport, la médaille remportée, le pays et le pays hôte des Jeux.</p>
+                            <li>Projet réalisé en groupe de 4 personnes </li>
+                        </ul>
+                        <h4>Structuration et traitement de bases de données</h4>
+                        <p>
+                            Un travail préliminaire de traitement des bases de données sur Rstudio est réalisé. J’ai joint les bases de données et nettoyé celles-ci suivant d’une sélection des variables nécessaires pour l’étude. 
+                        </p>
+                        <h4>Analyses des performances et des populations au Jeux olympique d’hiver
+                        </h4>
+                        <p>
+                            Dans le cadre de ce projet, le nombre d’habitants par pays est étudié. Afin d’analyser le nombre de médailles remportées, j’ai créé des classes de pays en fonction de la taille de leur population pour une année donnée. Une analyse est faite sur la population moyenne des pays participants aux Jeux Olympiques et le score moyen des médailles de ces pays par année par année. 		
+                        </p>
+                        <h4>Création de visualisation et calcul de corrélation 	</h4>
+                        <p>
+                        Pour visualiser les résultats, j’ai créé les différents graphiques dont ceux présentés. Le calcul de corrélation entre les variables est réalisé afin de déterminer le lien entre les variables. Ce calcul a montré que la corrélation entre la population maximale atteinte par un pays et le score des médailles maximal obtenu ne prouve pas un lien direct entre l'augmentation de la population et les performances aux Jeux.
+                        </p>
+                        <div class="box-image">
+                            <img src="image/projet2-jo1.png">
+                            <p><span style="color:#4D194D;">Livrables :</span> Rapport analytique présentant les résultats et les graphiques et une soutenance					</p>
+                            <p><span style="color:#4D194D;">Outils utilisés :</span>Rstudio, Excel, PowerPoint	</p>
+                
+                        </div>
+                        <a href="#" class="modal_close">&times;</a>
+                    </div>
+
+                </div>
+
+                
+            </div>
+        <!-- ------------------------------ Fin 2ème projet---------------------- -->
+        <!-- ------------------------------ DEBUT 3ème projet---------------------- -->
+
+            <div class="card">
+                <div class="container-text">
+                    <p><ion-icon name="school-outline">  </ion-icon>  Projet académique </p>
+                    <h3>Collecte des coordonnées géographiques via l’API</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Collecte de données Web</li>
+                        <li>Programmation Python                        </li>
+                        <li>Développement d'un outil décisionnel</li>
+                        <li>Traitement de données à des fins décisionnelles</li>
+                        <li>Automatisation de processus</li>
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés : </h4> 
+                        <img src="image/logo-python.png" alt="" >
+                        <img src="image/Jupyter_logo.png" alt="">
+                    </div>
+                </div>
+
+                <a href="#modal3" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal3" class="modal">
+                <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Collecte des coordonnées géographiques des entreprises et des établissements via l’API</h3>
+                        <ul> 
+                            <li> Base données <a href="https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/ ">Sirene </a> des entreprises et de leurs établissements issue de <a href="https://www.data.gouv.fr/fr/">data.gouv.fr </a></li>
+                            <li><strong>Enjeux : Fichier de données de départ très grand (6 go)</strong> </li>
+                            <li>Projet réalisé en groupe de 2 personnes </li>
+                        </ul>
+                        <h4>Programmation statistique et traitement de la base de données </h4>
+                        <p>La base de données a été nettoyée en amont. Le code a été développé d’abord à partir des 1000 premières lignes du fichier. A l’aide de la library Pandas a permis de créer des dataframes auxquelles j’ai joint des variables. 
+                        </p>
+                        <h4>Préparation du fichier à envoyer à l’ API  </h4>
+                        <p>
+                        Un fichier de données est préparé pour récupérer l’ensemble des coordonnées géographiques via l’API. Les données tels que le numéro de siren, siret, l’adresse, le code postale et la commune sont sélectionnées. Ces données sont essentielles afin d’assurer que le fichier de données sur les entreprises et des établissements collecte les données.
+            
+                        </p>
+                        <h4>Envoie du fichier permettant de collecter les coordonnées via l’API			</h4>
+                        <p>Des requêtes sont envoyées à l’API pour récupérer les coordonnées géographiques des entreprises et des établissements. 
+                        </p>
+                        <h4> Stockage des données </h4>
+                        <P>Les résultats reçus grâce à l’API sont stockés dans une nouvelle base de données. 
+                            Les coordonnées géographiques ont permis de compléter les informations concernant les adresses des entreprises et des établissements et à alimenter la base de données.</P>
+                        
+                        <div class="image-projet2"> 
+                            <img src="image/projet-collecte-api.jpg" >
+                            <p><span style="color:#4D194D;">Livrables :</span> Code python jupyter permettant de générer les données à partir du web			</p>
+                            <p><span style="color:#4D194D;">Outils utilisés :</span>Jupyter Notebook, Excel</p>
+                        </div>
+                    
+                        <a href="#" class="modal_close">&times;</a>
+                    </div>
+
+                </div>
+            </div>
+        <!-- ------------------------------ FIN 3ème projet---------------------- -->
+        <!-- ------------------------------ DEBUT 4ème projet---------------------- -->
+
+            <div class="card">
+                <div class="container-text">
+                    <p><ion-icon name="school-outline">  </ion-icon>  Projet académique </p>
+                    <h3>Implémentation d'un entrepôt de données pour optimiser la plateforme de ventes de livres Nil</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Traitement des données à des fins décisionnelles                        </li>
+                        <li>Modélisation multidimensionnelle</li>
+                        <li>Modèles de données des systèmes d’information décisionnels (datawarehouse, datamart) </li>
+                        <li>Implémentation d’un entrepôt de données </li>
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés : </h4> 
+                        <img src="image/logo-sql.png" alt="">
+                        <img src="image/RStudio_Logo.png" alt="">
+                    </div>
+                </div>
+                
+
+                <a href="#modal4" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal4" class="modal">
+                <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Implémentation d'un entrepôt de données pour optimiser la plateforme de ventes de livres Nil</h3>
+                        
+                        <h4>Contexte</h4>
+                        <p>Dans le cadre de ce projet, j'ai participé à l'élaboration et à l’intégration de données dans un entrepôt de données (Data Warehouse) pour l'entreprise Nil, une plateforme de vente en ligne de livres. L'objectif principal était de permettre à l'entreprise d'obtenir une meilleure connaissance de ses clients.                        </p>
+                        <h4>Compréhension des Besoins de l’Entreprise</h4>
+                        <p>J'ai commencé par analyser et comprendre les besoins spécifiques de l'entreprise Nil. Je me suis concentré sur plusieurs axes notamment le profil des clients, les catégories de livres les plus consultées, les catégories de livres consultées et acheter, le top 20 des livres les plus vendus et l'identification des catégories consultées.                         </p>
+                        <p>Ensuite, j'ai sélectionné les tables pertinentes et nécessaires pour répondre aux besoins identifiés. Cela inclut la définition des tables de dimensions et de faits, ainsi que leurs attributs, leur type de gestion de changements et leur granularité (instantané périodique et instantané récapitulatif).                        </p>
+                        <h4>Modélisation Relationnelle </h4>
+                        <p>J'ai mis en place une modélisation relationnelle complète en identifiant les faits, les dimensions, leurs attributs importants, ainsi que leur niveau de détail. J'ai choisi un schéma de modèle relationnel en flocon.</p>
+                        <h4> Création des tables et identification des mesures pertinentes </h4>
+                        <p>J'ai créé et rempli les tables avec les données représentatives à l’aide des requêtes SQL sur RStudio. Pour chaque niveau d'additivité, j'ai identifié des mesures pertinentes tels le chiffre d'affaires, le nombre de commandes et de clients. Ces mesures étaient cruciales pour les analyses et les rapports futurs.                        </p>
+                        <h4>Développement du Data Warehouse </h4>
+                        <p>Les tables modélisées sont créées à l'aide d'instructions SQL dans R. J'ai intégré les données préparées dans l'entrepôt de données selon la modélisation relationnelle établie. Ces requêtes m'ont permis d'extraire et de manipuler les données nécessaires pour les analyses.                        </p>
+                        <h4>Réalisation d’une maquette de reporting</h4>   
+                        <p>Étant donné que les données utilisées étaient représentatives et non réelles, j'ai réalisé une maquette de reporting. Cette maquette a servi à donner une idée de la représentation visuelle des analyses possibles.                        </p>                    
+                        <a href="#" class="modal_close">&times;</a>
+                    </div>
+
+                </div>
+            </div>
+        <!-- ------------------------------ FIN 4ème projet---------------------- -->
+        <!-- ------------------------------ DEBUT 5ème projet---------------------- -->
+   
+            <div class="card">
+                <div class="container-text">
+                    <p><ion-icon name="school-outline">  </ion-icon>  Projet académique </p>
+                    <h3>Analyse et prévision de la production d'électricité à partir du charbon</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Prévision d’une série chronologique</li>
+                        <li>Analyse descriptive et exploratoire </li>
+                        <li>Programmation statistique R  </li>
+                        <li>Visualisation de données</li>
+                        <li>Rédaction de rapport   </li>
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés : </h4> 
+                        <img src="image/RStudio_Logo.png" alt="">
+                        <img src="image/logo-canva.png" alt="" >
+                    </div>
+                </div>
+
+                <a href="#modal5" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal5" class="modal">
+                <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Analyse et prévision de la production d'électricité à partir du charbon</h3>
+                        <ul>
+                            <li>Source : Données issue du site<a href="https://www.iea.org/"> Energy Information Administration (EIA) </a></li>
+                            <li>L'objectif de ce projet est d'examiner une série chronologique relative à la production d'électricité à partir du charbon.</li>    
+                        </ul>
+                        <h4>Analyse statistique descriptive  </h4>
+                        <p>Une étude statistique descriptive de la série chronologique a été réalisée en amont. Cette étape a permis de saisir les principales caractéristiques de la production d'électricité à partir du charbon.</p>
+                        <h4> Analyse de la tendance </h4>
+                        <p>Ensuite, j’ai analysé la série chronologique pour évaluer la tendance au cours des trois dernières années. Cette analyse a révélé que la série temporelle de la production d’électricité au charbon est additive et présente une tendance décroissante. La série est restée stable jusqu’en 2010, après quoi une tendance à la baisse a été observée.                        </p>
+                        <h4> Identification de la composante saisonnière</h4>
+                        <p>L’analyse a également permis de mettre en évidence une forte composante saisonnière dans la production d'électricité à partir du charbon, avec des variations prévisibles à des moments spécifiques de l'année. Les fluctuations des coefficients saisonniers suggèrent une saisonnalité marquée.                        </p>
+                        <h4>Prédiction de la production d’électricité au charbon</h4>
+                        <p>Pour prédire la production future d'électricité à partir du charbon, j’ai utilisé les méthodes ARMA (AutoRegressive Moving Average) et Holt-Winters. Les prédictions ont montré que la série des valeurs ajustées était proche de la série initiale, ce qui a conduit à des résidus très faibles.                        </p>
+                        <h4>Évaluation des méthodes de prédiction</h4>
+                        <p>La méthode Holt-Winters s'est révélée être la plus adaptée et performante pour réaliser la prévision de la production d’électricité au charbon pour l’année 2023, grâce à une erreur quadratique moyenne plus basse comparée à celle des autres méthodes.                        </p>
+                        <a href="#" class="modal_close">&times;</a>
+                    </div>
+
+                </div>
+
+            </div>
+        <!-- ------------------------------ FIN 5ème projet---------------------- -->
+        <!-- ------------------------------ DEBUT 6ème projet---------------------- -->
+  
+            <div class="card">
+                <div class="container-text">
+                    <p> <ion-icon name="briefcase-outline"></ion-icon> Mission en entreprise </p>
+                    <h3>Détection des anomalies courantes et mise en œuvre de mesures correctives adaptées</h3>
+                    <h4>Compétences développées : </h4> 
+                    <ul>
+                        <li>Contrôle de qualité des données</li>
+                        <li>Traitement de données à des fins décisionnelles</li>
+                        <li>Résolution de problèmes d’intégration de sources</li>
+                        <li>Requêtage SQL</li>
+
+                    </ul>
+                    <div class="container-outils">
+                        <h4>Outils utilisés :</h4>
+                        <img src="image/Oracle_Logo.jpg" alt="" >
+                        <img src="image/Microsoft-Office-logo.jpg" alt="" >
+                    </div>
+                    
+
+                </div>
+
+                <a href="#modal6" class="ouvre">En savoir plus <ion-icon name="open-outline"> </ion-icon></a>
+                <div id="modal6" class="modal">
+                <!-----------------------------DEBUT CONTENUE MODAL-------------------->
+                    <div class="modal_content">
+                        <h3>Détection des anomalies courantes et mise en œuvre de mesures correctives adaptées</h3>
+                        <p>Au cours de cette mission, j'ai assuré la détection des anomalies courantes dans les données en surveillant régulièrement les entrées et les processus de saisie. J'ai analysé les causes de ces anomalies et mis en œuvre des mesures correctives adaptées. </p>
+                        <p>Ces actions correctives ont permis de renforcer la qualité des données garantissant ainsi une meilleure fiabilité et intégrité des informations au sein des systèmes d'information de l'entreprise.                         </p>
+                        <p>En effectuant des vérifications régulières et en identifiant les éventuelles incohérences, j'ai pu garantir que les informations disponibles dans les systèmes étaient précises et à jour, contribuant ainsi à une prise de décision éclairée et efficace au sein de l'entreprise.                        </p>
+                        
+
+                        <a href="#" class="modal_close">&times;</a>
+                    </div>
+
+                </div>
+            </div>
+        <!-- ------------------------------ FIN 6ème projet---------------------- -->
+
+
+        </div>
 
 
 
-			<!-- -----------------DEBUT 2eme PROJET------------------------>
-			<div class="container-page-projet">
-				<!-- ------------DEBUT DU PREMIER PROJET ------------ -->	
-				<div class="titre-projet">
-					<h3>Etude analytique du lien entre la taille de la population et les performances des pays aux Jeux Olympiques d'hiver</h3>
-				</div>
-				
-				<div class="box-intro">
-					<ul> 
-						<li>Source : Bases de données issues des sites<a href="https://databank.worldbank.org/"> DataBank </a>et <a href="https://www.data.gouv.fr/fr/"> data.gouv.fr </a>
-						</li>
-						<p>Afin d'analyser au mieux notre sujet, la base de données est importée à partir du site Data gouv contenant les données concernant les différentes médailles des Jeux Olympique d’hiver de 1924 à 2010. La seconde base de données regroupe l’évolution de la taille de la population des pays de 1960 à 2021 et comprend des informations telles que l'année, le sport, la médaille remportée, le pays et le pays hôte des Jeux.</p>
-						<li>Projet réalisé en groupe de 4 personnes </li>
-					</ul>
-				</div>
-				
-				<div class="box">
-					<h4>Structuration et traitement de bases de données</h4>
-					<p>
-						Un travail préliminaire de traitement des bases de données sur Rstudio est réalisé. J’ai joint les bases de données et nettoyé celles-ci suivant d’une sélection des variables nécessaires pour l’étude. 
-					</p>
-					<h4>Analyses des performances et des populations au Jeux olympique d’hiver
-					</h4>
-					<p>
-						Dans le cadre de ce projet, le nombre d’habitants par pays est étudié. Afin d’analyser le nombre de médailles remportées, j’ai créé des classes de pays en fonction de la taille de leur population pour une année donnée. Une analyse est faite sur la population moyenne des pays participants aux Jeux Olympiques et le score moyen des médailles de ces pays par année par année. 		
-					</p>
-					<h4>Création de visualisation et calcul de corrélation 	</h4>
-					<p>
-					Pour visualiser les résultats, j’ai créé les différents graphiques dont ceux présentés. Le calcul de corrélation entre les variables est réalisé afin de déterminer le lien entre les variables. Ce calcul a montré que la corrélation entre la population maximale atteinte par un pays et le score des médailles maximal obtenu ne prouve pas un lien direct entre l'augmentation de la population et les performances aux Jeux.
-					</p>
-		
-				</div>
-
-				<div class="box-image">
-					<img src="image/projet2-jo1.png">
-					<p><span style="color:#4D194D;">Livrables :</span> Rapport analytique présentant les résultats et les graphiques et une soutenance					</p>
-					<p><span style="color:#4D194D;">Outils utilisés :</span>Rstudio, Excel, PowerPoint	</p>
-		
-				</div>
 
 
-			
-		
-
-			<!-- ----------FIN 2eme PROJET----------------- -->
-
-			
-	
-		<!-- ------------DEBUT DU TROISIEME PROJET ------------ -->	
-		<div class="container-page-projet2"></div>
-		<div class="titre-projet">
-			<h3>Collecte des coordonnées géographiques des entreprises et des établissements via l’API</h3>
-		</div>
-		
-		<div class="box-intro">
-			<ul> 
-				<li> Base données <a href="https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/ ">Sirene </a> des entreprises et de leurs établissements issue de <a href="https://www.data.gouv.fr/fr/">data.gouv.fr </a>
-				</li>
-				<li><strong>Enjeux : Fichier de données de départ très grand (6 go)</strong> </li>
-				<li>Projet réalisé en groupe de 2 personnes </li>
-			</ul>
-		</div>
-		<div class="box">
-			<h4>Programmation statistique et traitement de la base de données </h4>
-			<p>La base de données a été nettoyée en amont. Le code a été développé d’abord à partir des 1000 premières lignes du fichier. A l’aide de la library Pandas a permis de créer des dataframes auxquelles j’ai joint des variables. 
-			</p>
-			<h4>Préparation du fichier à envoyer à l’ API  </h4>
-			<p>
-			Un fichier de données est préparé pour récupérer l’ensemble des coordonnées géographiques via l’API. Les données tels que le numéro de siren, siret, l’adresse, le code postale et la commune sont sélectionnées. Ces données sont essentielles afin d’assurer que le fichier de données sur les entreprises et des établissements collecte les données.
-
-			</p>
-			<h4>Envoie du fichier permettant de collecter les coordonnées via l’API			</h4>
-			<p>Des requêtes sont envoyées à l’API pour récupérer les coordonnées géographiques des entreprises et des établissements. 
-			</p>
-			<h4> Stockage des données </h4>
-			<P>Les résultats reçus grâce à l’API sont stockés dans une nouvelle base de données. 
-				Les coordonnées géographiques ont permis de compléter les informations concernant les adresses des entreprises et des établissements et à alimenter la base de données.
-				</P>
-		</div>
-		<div class="image-projet2"> 
-			<img src="image/projet-collecte-api.jpg" width=40%>
-			<p><span style="color:#4D194D;">Livrables :</span> Code python jupyter permettant de générer les données à partir du web			</p>
-			<p><span style="color:#4D194D;">Outils utilisés :</span>Jupyter Notebook, Excel</p>
-		</div>
-
-
-
-
-
-
-				
-    </body>
+        
+</body>
 </html>
+
