@@ -129,24 +129,23 @@ hr.dropdown-divider{
     header .navbar .menu{
         position: absolute;
         top:25%;
-        left: 700px;
         right:0;
         background-color:#4D194D;
         border-top: 1px solid;
-        display: block;
+        display: none;
         height:100vh;
         text-align: center;
         font-size: 15px; 
         z-index: 1000;
     }
+    #check:checked ~ .menu {
+        display: block;
+    }
     header .navbar .menu li {
         width: 100%;  
-        position: relative;            
+        position: relative;         
     }
-    header .navbar .menu li a{
-        padding: 8px 30px 8px 10%;
-        position: relative;  
-    }
+
     header .navbar ul li .dropdown-menu{
         display: none;
         position: relative;
@@ -162,12 +161,12 @@ hr.dropdown-divider{
         left: 0;
         color: #4D194D;
         border: none;
-        text-align: center;
+        text-align:left
     }
     header .dropdown-menu li:hover, header .dropdown-menu li a:hover {
-        background-color:#E2FCEF;
+
         color:#4D194D;
-        border: none;
+        border: 1px solid #E2FCEF;
     }
     header .dropdown-menu li:active{
         background-color: #E2FCEF;

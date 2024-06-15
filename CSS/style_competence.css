@@ -2,31 +2,108 @@
 
 .contenue-page-cptc {
     display: flex;
-    justify-content: space-between; /* Distribue les éléments également dans l'espace disponible */
+    justify-content: space-around;/* Distribue les éléments également dans l'espace disponible */
     flex-wrap: wrap; /* Permet le retour à la ligne des éléments lorsque l'espace est insuffisant */
-    
+    flex-direction: row;
 }
 
-.list-cptc{
+.list-cptc-stat{
     margin: 20px 0;
     background-color:#4D194D;
     color: white;
-    width: 50%;
+    width: 40%;
     padding: 20px 50px;
-
+    border: 4px solid #E2FCEF;
+    position: relative;
 }
-.list-cptc h2{
+.list-cptc-stat h2{
     text-align: center;
     padding-bottom: 20px;
     color: #E2FCEF;
+    text-transform:capitalize;
+}
+.list-cptc-info{
+    margin: 20px 0;
+    padding: 30px 50px;
+    width: 40%;
+    box-sizing: border-box; 
+    border: 4px solid #4D194D;
+    position: relative;
 }
 
+/*Debut de l'effet pour le survol*/
+.list-cptc-info::before, .list-cptc-info::after{
+    border:4px solid #E2FCEF;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;    
+    transition: all 0.4s;
+}
+.list-cptc-stat::before, .list-cptc-stat::after{
+    border:4px solid #4D194D;
+    content:'';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.4s;
+}
+.list-cptc-info::before{
+    top:-4px;
+    left: -4px;
+    border-width: 4px 0px 0px 4px;
+}
+.list-cptc-info::after{
+    bottom:-4px;
+    right: -4px;
+    border-width: 0px 4px 4px 0px;
+}
 
+.list-cptc-stat::before{
+    top:-4px;
+    left: -4px;
+    border-width: 4px 0px 0px 4px;
+}
+.list-cptc-stat::after{
+    bottom:-4px;
+    right: -4px;
+    border-width: 0px 4px 4px 0px;
+}
+.list-cptc-info:hover.list-cptc-info:before, .list-cptc-info:hover.list-cptc-info:after{
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
+.list-cptc-stat:hover.list-cptc-stat:before, .list-cptc-stat:hover.list-cptc-stat:after{
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
+.list-cptc-info:hover{
+    background-color: #E2FCEF;
+    transition: all 0.5s;
+}
+.list-cptc-stat:hover{
+    background-color: #E2FCEF;
+    transition: all 0.5s;
+    color: black;
+}
+.list-cptc-stat:hover h2{
+    color: #4D194D;
+}
+.list-cptc-info h2{
+    color: #4D194D;
+    text-align: center;
+    padding-bottom: 20px;
+    text-transform:capitalize;
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interaction */
+}
 .list-outils{
     padding: 30px 50px;
-    width: 50%;
+    width: 40%;
     box-sizing: border-box; 
-    
+    position: relative;
+    border: 4px solid #4D194D;
 }
 .list-outils img{
     width: 20%;
@@ -36,40 +113,94 @@
 .list-outils img:hover{
 	background-color:#E2FCEF;
 	transition: 0.2s;
-
 }
 .list-outils h2{
     color: #4D194D;
     text-align: center;
     padding-bottom: 20px;
 }
-
+.list-outils::before, .list-outils::after{
+    border:4px solid #E2FCEF;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;    
+    transition: all 0.4s;
+}
+.list-outils::before{
+    top:-4px;
+    left: -4px;
+    border-width: 4px 0px 0px 4px;
+}
+.list-outils::after{
+    bottom:-4px;
+    right: -4px;
+    border-width: 0px 4px 4px 0px;
+}
+.list-outils:hover.list-outils::before, .list-outils:hover.list-outils::after{
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
+.list-outils:hover{
+    background-color: #E2FCEF;
+    transition: all 0.5s;
+}
 .list-langues{
     margin: 20px 0;
     background-color:#4D194D;
     color: white;
-    width: 100%;
-    padding: 20px 50px;
+    width: 40%;
+    padding: 20px 30px;
+    position: relative;
+}
+.list-langues::before,.list-langues::after{
+    border:4px solid #4D194D;
+    content:'';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.4s;
+}
+.list-langues::before{
+    top:-4px;
+    left: -4px;
+    border-width: 4px 0px 0px 4px;
+}
+.list-langues::after{
+    top:-4px;
+    left: -4px;
+    border-width: 0px 4px 4px 0px;
+}
+.list-langues:hover.list-langues::before,.list-langues:hover.list-langues::after{
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
+.list-langues:hover{
+    background-color: #E2FCEF;
+    transition: all 0.5s;
+    color: black;
+}
+.list-langues:hover h2{
+    color: #4D194D;
 }
 .list-langues h2{
     text-align: center;
     padding-bottom: 20px;
     color: #E2FCEF;
 }
-.list-langues li{
-    text-align: center;
-}
+
 
 @media (max-width: 980px) {
     .contenue-page-cptc{
       flex-direction: column;
         
     }
-    .list-cptc{
+    .list-cptc-info,.list-cptc-stat, .list-langues{
         width: 100%;
     }
     .list-outils{
         width: 100%;
-        margin:0 20px;
     }
 }
